@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whitelist Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="openPopup">Whitelist Request</button>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Whitelist Form</h2>
+      <label>Discord Username:</label>
+      <input type="text" id="discordUsername" placeholder="e.g. user#1234">
+      
+      <label>Minecraft ID:</label>
+      <input type="text" id="minecraftID" placeholder="e.g. Notch">
+
+      <label>Client:</label>
+      <select id="clientType">
+        <option value="JAVA">JAVA</option>
+        <option value="BEDROCK">BEDROCK</option>
+      </select>
+
+      <div class="popup-buttons">
+        <button id="cancelBtn">Cancel</button>
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

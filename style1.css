@@ -1,0 +1,131 @@
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff8dc;
+  background: linear-gradient(270deg, #ffcc00, #ff9900, #ffcc00);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  display: flex;ffcc00
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Gradient Animation */}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  flex: 1;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 12px #000000, 0 0 20px #000000;
+
+
+/* Card Sections */
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ffcc00;
+  box-shadow: 0 0 10px #000000, 0 0 20px #000000;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 3px #ffcc00;
+}
+
+/* Player List */
+#player-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.player-entry {
+  padding: 10px 14px;
+  background: #1a1a1a;
+  border: 1px solid #ffaa00;
+  border-radius: 8px;
+  color: #ffcc00;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffcc00;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.player-entry:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #ffaa00, 0 0 20px #ffcc00;
+}
+
+/* Input and Button */
+input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ffaa00;
+  background: #111;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 16px;
+  background: #ffcc00;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ffaa00;
+}
+
+/* Player Detail Output */
+#player-details {
+  background: #111;
+  color: #ffcc00;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ffaa00;
+  white-space: pre-wrap;
+}
+
+/* Footer Credits */
+.footer-credits {
+  text-align: center;
+  padding: 20px;
+  color: #fff8dc;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px #ffaa00;
+}

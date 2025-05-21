@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAGATHA SERVER</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Finger+Paint&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Sigmar&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="title"><u>MAGATHA SERVER</u></h1>
+    </header>
+
+    <main>
+      <section class="card neon-border">
+        <h2><u>Server Status</u></h2>
+        <p>✅ ONLINE</p>
+        <p><u>Version</u>: <span id="server-version">...</span></p>
+      </section>
+
+      <section class="card neon-border">
+        <h2><u>Players</u></h2>
+        <p><u>Online Now</u>: <span id="online-players">...</span></p>
+        <p><u>ONLINE PLEYERS</u></p>
+        <div id="player-list">Loading player data...</div>
+      </section>
+
+      <section class="card neon-border">
+        <h2><u>Whitelist</u></h2>
+        <button id="openPopup">Whitelist Request</button>
+      </section>
+
+      <!-- Whitelist Popup -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <h2>Whitelist Form</h2>
+          <label>Discord Username:</label>
+          <input type="text" id="discordUsername" placeholder="e.g. user#1234">
+          
+          <label>Minecraft ID:</label>
+          <input type="text" id="minecraftID" placeholder="e.g. Notch">
+
+          <label>Client:</label>
+          <select id="clientType">
+            <option value="JAVA">JAVA</option>
+            <option value="BEDROCK">BEDROCK</option>
+          </select>
+
+          <div class="popup-buttons">
+            <button id="cancelBtn">Cancel</button>
+            <button id="sendBtn">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success/Failure Popup Message -->
+      <div id="popup-message"></div>
+    </main>
+  </div>
+  <footer class="footer-credits">Team Magatha | 2025</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

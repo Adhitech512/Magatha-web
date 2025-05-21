@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Players</title>
+</head>
+<body>
+    <h1>Online Players</h1>
+    <ul id="player-list"></ul>
+
+    <script>
+    fetch('http://89.144.10.156:25698/api/players/online/')
+        .then(response => response.text())
+        .then(rawText => {
+            alert("Raw API Response: " + rawText);
+
+            // Remove any trailing comma or newline at the end
+            let trimmed = rawText.trim().replace(/,\s*$/, '');
+
+            // Wrap in [ ] to form a proper JSON array
+            const fixedText = `[${trimmed}]`;
+
+            alert("Fixed JSON String: " + fixedText);
+
+            let players;
+            try {
+                players = JSON.parse(fixedText);
+            } catch (err) {
+                alert("JSON Parse Error: " + err);
+                return;
+            }
+
+            const list = document.getElementById('player-list');
+            players.forEach(player => {
+                const li = document.createElement('li');
+                li.textContent = player.name + " (" + player.uuid + ")";
+                list.appendChild(li);
+            });
+        })
+        .catch(error => {
+            alert('Failed to fetch player data: ' + error);
+        });
+</script>
+</body>
+</html>
