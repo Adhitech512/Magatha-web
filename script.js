@@ -1,4 +1,4 @@
-const baseURL = "http://magathaweb.horion.fun:25698/api";
+const baseURL = "http://magatha.run.place:25698/api";
 
 // Server Status Fetch
 async function fetchServerData() {
